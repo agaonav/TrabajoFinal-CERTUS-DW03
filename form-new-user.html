@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio - Crear cuenta</title>
+
+    <!-- Agregar los estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Agregar los estilos personalizados -->
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+
+    <!-- Clase contenedor -->
+    <main class="container">
+
+        <!-- Clase fila -->
+        <div class="row justify-content-md-center">
+
+            <!-- Formulario para la creación de una cuenta -->
+            <form class="col-6 registroUsuario px-5 py-4" id="formCreateAccount" action="received.html" method="post">
+
+                <!-- Titulo del formulario -->
+                <h2>Crear su cuenta</h2>
+
+                <!-- Entrada "Nombre" -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtName">Nombre:</label>
+                    <input class="form-control" type="text" name="firstname" id="txtName" maxlength="50" required>
+                </div>
+
+                <!-- Entrada "Apellido" -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtLastName">Apellidos:</label>
+                    <input class="form-control" type="text" name="lastname" id="txtLastName" maxlength="50" required>
+                </div>
+
+                <!-- Entrada "DNI" -->
+                <div class="mb-3">
+                    <label class="form-label" for="intDNI">DNI:</label>
+                    <input class="form-control" type="tel" name="dni" id="intDNI" maxlength="8" required>
+                </div>
+
+                <!-- Entrada "Correo electronico" -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtEmail">Correo electrónico:</label>
+                    <input class="form-control" type="email" name="email" id="txtEmail" maxlength="100" required>
+                </div>
+
+                <!-- Entrada "Fecha de Nacimiento" -->
+                <div class="mb-3">
+                    <label class="form-label" for="intFecNac">Fecha de nacimiento:</label>
+                    <input class="form-control" type="date" name="fecnac" id="intFecNac" min="1970-12-31"
+                        max="2005-12-31" required>
+                </div>
+
+                <!-- Entrada "Sexo" -->
+                <div class="mb-3">
+                    <p class="form-label">Sexo</p>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexo" id="bolMasculino" value="m" checked>
+                        <label class="form-check-label" for="bolMasculino" style="display:inline">Masculino</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexo" id="bolFemenino" value="f">
+                        <label class="form-check-label" for="bolFemenino" style="display:inline">Femenino</label>
+                    </div>
+
+                </div>
+
+                <!-- Entrada "Usuario" -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtUser">Usuario:</label>
+                    <input class="form-control" type="text" name="user" id="txtUser" required>
+                </div>
+
+                <!-- Entrada "Contraseña" -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtPassword">Contraseña</label>
+                    <input class="form-control" type="password" name="password" id="txtPassword" maxlength="60"
+                        required>
+                </div>
+
+                <!-- Entrada "Celular" -->
+                <div class="mb-3">
+                    <label class="form-label" for="intPhone">Télefono/Celular:</label>
+                    <input class="form-control" type="tel" name="cel" id="intPhone" maxlength="13">
+                </div>
+
+                <!-- Entrada "Dirección" -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtAddress1">Dirección:</label>
+                    <input class="form-control" type="text" name="address1" id="txtAddress1" maxlength="100">
+                    <input class="form-control" type="text" name="address2" id="txtAddress2" maxlength="100">
+                </div>
+
+                <!-- Entrada "Acepta las condiciones" -->
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="bolAccept" required>
+                        <label class="form-check-label" style="display:inline-block" for="bol">Acepta las <a
+                                href="#">condiciones</a> para crear una
+                            cuenta.</label>
+                    </div>
+                </div>
+
+                <!-- Entrada "Submit" -->
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
